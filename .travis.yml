@@ -1,1 +1,5 @@
 language: java
+notifications:
+  email:
+    - adhawan@shiplets.com
+    - amit-rai@outlook.com
