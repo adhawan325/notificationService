@@ -10,7 +10,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.s9.domain.Message;
 
-@Path("people")
+@Path("messages")
 public class MessageResource {
 
     @GET
