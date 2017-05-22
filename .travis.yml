@@ -2,10 +2,18 @@ language: java
 script: 
       - ls
       - pwd
+deploy:
+      - provider: s3
+        access_key_id: "AKIAJJPT7JUE7DS7BHLA"
+        secret_access_key: "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"
+        bucket: "s9notificationservice"
+        key: notification-service-0.0.1-SNAPSHOT.war
+        application: notificationService
+        deployment_group: MyDeploymentGroup
 notifications:
   email:
     recipients:
       - adhawan@shiplets.com
       - amit-rai@outlook.com
-    on_success: always # default: change
+    on_success: change # default: change
     on_failure: always # default: always
