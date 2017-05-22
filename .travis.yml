@@ -1,20 +1,21 @@
 language: java
-script: 
-      - cd target
-      - ls
-      - pwd
+script:
+- cd target
+- ls
+- pwd
 deploy:
-      skip_cleanup: true
-      provider: s3
-      access_key_id: "AKIAJJPT7JUE7DS7BHLA"
-      secret_access_key: "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"
-      bucket: "s9notificationservice"
-      key: target/notification-service-0.0.1-SNAPSHOT.war
-        
+  skip_cleanup: true
+  provider: s3
+  bucket: s9notificationservice
+  key: target/notification-service-0.0.1-SNAPSHOT.war
+  access_key_id:
+    secure: sRiA47GxWLjgmDBuFwDX/NHsGs1VNfLqgpMceFo83IsFlvsyNUpKyntVU16x05SXllkWpTUD8jYwlORELJtC0UQ2ujw0KojFATOauNWqqWZHugEDFUhyjDEanEUDQKGVLHMXBYEsTtKWBppMzK0f3N7d7CEUjxZrZHw1F8yZzj0gA5cOS7x3RIMRET1fAqkXlWa1Ucl1yGp0/k7o6zUf+wbkDWMUSfgIpEEVjrTTCFbecwpngec+sM7eO+UcJ55d7kaa0bCJm8t5NkGeIPlykaS169YEYosKrBEzwVhWCfw833IUH6yPWJfh7PP8+n+fn8E1m3dW0vru7MIq/nu5eHwXcUXgh+I22+fAywVwwiEJcv5cvwkKsqjnWKyAWxjHJUubEI35SBZqoJfGUscq+HbH0W9Lf6sL36buGFJHtrdrvRitrDJd77mZkIbXLbOZpVoBPlzT7mOH+CMM3q5ez7qwlQJutvb/QScv14QQCz6NjK53VVaWxqT5SMtlblqQWmh+pGLHRuR0OVCxo5cPfGnK9VlsfquauIOLZZW7qbnbpnYiFIZFTD9u8LZ/oo3GkxKR3XWEeRLf6pSQb853MXcn1P5PQBtTOsXyRUhmPSvj2COPGSn6tO+woxjE3HbO6fBTAiYIDkInsWLVDRNCQLoMQZPOL6wuNldB+RbpITk=
+  secret_access_key:
+    secure: Ao8E5jmsySKlt2N/lrQ7pS0zTZsx5DJnFKumocxmlAlXxRm6oKsR959ts81+S3sbnLKGUCwUA+jy4351HsaayI7YGTHB5GJkdcSHPvoudpMJp4HohOad3KxRu8Rd2GGZxnuOs2xrmboDumIYIFlmnkSHrGQ67Qj4oIs/JZg1of1OmNQgVMpnPwCi+lFX6Hq+9B/t8ILScvo7ZnJEKsD494NIdXnHeeb+eSNN1iDj1yahiEogHu25JSZRvUXs/1QyU0nu9um51uRJypPdtO3AEsd/T669mwzL1IOuyr40Li9XPoYzURue1q6P4kMcESgXTDjXsbf6fRT62c6sVD/nhUhTKZWan02ChyVG2wkyGMq5elm9KYi1FGmO9R9yoaouZXRwhHCJnqRXmjyRiDYHrX5BR6bwutsmyZbg9s6TdseuSZjLLhyiwt184wWGioDXuGLUvLXlmLVJjV0uosMk82EPimWgFRI4V9psB+2A0i6O7yISSYejZen7mtXNLuH72LILBvrsh2zpaZ2OUuQA4xsgve/Bc+gTpJJrVgHAPIpvzM0I0gHgZ5CrDceVSd7Z/mFPFcdTHqvBcAGRYXOywaV+cuxNXcbFvTdHegYfcQOtMFaAoFbx+9iTa5KVX/9XdmhtE9+jPSZfTDg/z8wMKMVULbkXIozr4lEPWobHvu0=
 notifications:
   email:
     recipients:
-      - adhawan@shiplets.com
-      - amit-rai@outlook.com
-    on_success: change # default: change
-    on_failure: always # default: always
+    - adhawan@shiplets.com
+    - amit-rai@outlook.com
+    on_success: change
+    on_failure: always
