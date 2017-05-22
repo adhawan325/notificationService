@@ -1,5 +1,6 @@
 language: java
 script: 
+      - cd target
       - ls
       - pwd
 deploy:
@@ -7,7 +8,7 @@ deploy:
         access_key_id: "AKIAJJPT7JUE7DS7BHLA"
         secret_access_key: "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"
         bucket: "arn:aws:s3:::s9notificationservice"
-        key: notification-service-0.0.1-SNAPSHOT.war
+        key: target/notification-service-0.0.1-SNAPSHOT.war
         application: notificationService
         deployment_group: MyDeploymentGroup
 notifications:
